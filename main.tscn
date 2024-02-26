@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhslxnf33ukw"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_3ioyt"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_3ioyt")
+
+[node name="New game" type="Button" parent="."]
+offset_left = 97.0
+offset_top = 97.0
+offset_right = 279.0
+offset_bottom = 167.0
+text = "new game 
+"
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 97.0
+offset_top = 209.0
+offset_right = 278.0
+offset_bottom = 281.0
+text = "Continue"
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 103.0
+offset_top = 332.0
+offset_right = 281.0
+offset_bottom = 401.0
+text = "Setting"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 102.0
+offset_top = 440.0
+offset_right = 277.0
+offset_bottom = 504.0
+text = "Quit"
+
+[connection signal="pressed" from="New game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
