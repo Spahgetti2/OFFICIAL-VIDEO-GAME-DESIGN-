@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyqkkx53j8dc"
-path="res://.godot/imported/Clown Spritesheet.png-59ea8b22196cb0ef9fdfa145029d7813.ctex"
+uid="uid://tn5hj5niwuxh"
+path="res://.godot/imported/gnomeme.png-a60bd0d5b2c1c62cb30d1f6aaf230d50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Clown Spritesheet.png"
-dest_files=["res://.godot/imported/Clown Spritesheet.png-59ea8b22196cb0ef9fdfa145029d7813.ctex"]
+source_file="res://gnomeme.png"
+dest_files=["res://.godot/imported/gnomeme.png-a60bd0d5b2c1c62cb30d1f6aaf230d50.ctex"]
 
 [params]
 
