@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dj3lanf210gno"]
+[gd_scene load_steps=2 format=3 uid="uid://dj3lanf210gno"]
 
-[node name="Gnome" type="Sprite2D"]
+[ext_resource type="Texture2D" uid="uid://tn5hj5niwuxh" path="res://gnomeme.png" id="1_n5xay"]
+
+[node name="Gnome" type="CharacterBody2D"]
+
+[node name="Gome" type="Sprite2D" parent="."]
+position = Vector2(585, 404)
+texture = ExtResource("1_n5xay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
