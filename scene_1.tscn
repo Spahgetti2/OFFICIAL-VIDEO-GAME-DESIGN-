@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://c6rdgnccc34rq"]
+[gd_scene load_steps=2 format=3 uid="uid://c6rdgnccc34rq"]
 
-[node name="Scene 1" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://dj3lanf210gno" path="res://gnome.tscn" id="1_je1vp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Gnome" parent="." instance=ExtResource("1_je1vp")]

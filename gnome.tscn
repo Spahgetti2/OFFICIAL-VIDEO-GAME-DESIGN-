@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj3lanf210gno"]
+[gd_scene load_steps=3 format=3 uid="uid://dj3lanf210gno"]
 
 [ext_resource type="Texture2D" uid="uid://tn5hj5niwuxh" path="res://gnomeme.png" id="1_n5xay"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ptjd"]
+radius = 32.0
+
 [node name="Gnome" type="CharacterBody2D"]
 
-[node name="Gome" type="Sprite2D" parent="."]
-position = Vector2(585, 404)
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_n5xay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.00564, 1)
+shape = SubResource("CircleShape2D_5ptjd")
