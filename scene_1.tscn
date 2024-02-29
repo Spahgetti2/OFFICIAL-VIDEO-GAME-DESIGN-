@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6rdgnccc34rq"]
+[gd_scene load_steps=3 format=3 uid="uid://c6rdgnccc34rq"]
 
 [ext_resource type="PackedScene" uid="uid://dj3lanf210gno" path="res://gnome.tscn" id="1_je1vp"]
+
+[sub_resource type="TileSet" id="TileSet_8xm6p"]
+tile_size = Vector2i(64, 64)
 
 [node name="Main" type="Node2D"]
 
 [node name="Gnome" parent="." instance=ExtResource("1_je1vp")]
 position = Vector2(1, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_8xm6p")
+format = 2
