@@ -1,35 +1,39 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6rdgnccc34rq"]
 
-[ext_resource type="PackedScene" uid="uid://dj3lanf210gno" path="res://gnome.tscn" id="1_je1vp"]
+[ext_resource type="PackedScene" uid="uid://bp0y3708fprpo" path="res://character_animation.tscn" id="1_4i0x3"]
 [ext_resource type="Texture2D" uid="uid://ddybkfvbkjtw3" path="res://Assets/Tiles/tile top.png" id="2_6uco0"]
 [ext_resource type="Texture2D" uid="uid://dxfl8n4pb0vjb" path="res://Assets/Tiles/Tile.png" id="3_6aiwg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts58n"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eipoe"]
 texture = ExtResource("2_6uco0")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wa6m0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sjglc"]
 texture = ExtResource("3_6aiwg")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_8xm6p"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_ts58n")
-sources/4 = SubResource("TileSetAtlasSource_wa6m0")
+physics_layer_0/collision_mask = 3
+sources/3 = SubResource("TileSetAtlasSource_eipoe")
+sources/4 = SubResource("TileSetAtlasSource_sjglc")
 
 [node name="Main" type="Node2D"]
 
-[node name="Gnome" parent="." instance=ExtResource("1_je1vp")]
-position = Vector2(1, 0)
+[node name="Character animation test" parent="." instance=ExtResource("1_4i0x3")]
+position = Vector2(28, 353)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8xm6p")
 format = 2
-layer_0/tile_data = PackedInt32Array(589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 524305, 4, 0, 524304, 4, 0, 524303, 4, 0, 524302, 4, 0, 524301, 4, 0, 524300, 4, 0, 524299, 4, 0, 524298, 4, 0, 524297, 4, 0, 524296, 4, 0, 524295, 4, 0, 524294, 4, 0, 524293, 4, 0, 524292, 4, 0, 524291, 4, 0, 524290, 4, 0, 524289, 4, 0, 524288, 4, 0, 458752, 3, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 3, 0, 458768, 3, 0, 458769, 3, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0)
+layer_0/name = "Platforms "
+layer_0/tile_data = PackedInt32Array(458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0, 524304, 4, 0, 524305, 4, 0, 458769, 4, 0, 458768, 4, 0, 458767, 4, 0, 458766, 4, 0, 458765, 4, 0, 589840, 4, 0, 589841, 4, 0, 655377, 4, 0, 655376, 4, 0, 655375, 4, 0, 655374, 4, 0, 655373, 4, 0, 655372, 4, 0, 655371, 4, 0, 655370, 4, 0, 655369, 4, 0, 655368, 4, 0, 655367, 4, 0, 655366, 4, 0, 655365, 4, 0, 655364, 4, 0, 655363, 4, 0, 655362, 4, 0, 655361, 4, 0, 655360, 4, 0, 589824, 4, 0, 524288, 4, 0, 524289, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 524299, 4, 0, 524298, 4, 0, 524297, 4, 0, 524296, 4, 0, 524295, 4, 0, 524294, 4, 0, 524293, 4, 0, 524292, 4, 0, 524291, 4, 0, 524290, 4, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0, 393226, 3, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0)
