@@ -7,8 +7,8 @@ extends CharacterBody2D
 @export var cayote_time : float = 0.075
 @export var gravity_multiplier : float = 3.0
 
-@onready var ap = $AnimationPlayer
-@onready var sprite = $Sprite2D
+@onready var sprite_2d = $Sprite2D
+@onready var animation_player = $AnimationPlayer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -46,6 +46,16 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
+	if direction != 0:
+		sprite_2d.flip_h = direction < 0
+		handle_animations(direction)
+	
 	move_and_slide()
+	
+func handle_animations(direction : float) -> void:
+	if abs(direction) > 0.1 and is_on_floor():
+		animation_player.play("Running")
+	else:
+		animation_player.play("Idle")
 
 	
